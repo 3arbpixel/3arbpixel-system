@@ -454,7 +454,7 @@ google({ query: input, disableConsole: true }).then(results => {
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'perms')) {
          if(!message.channel.guild) return;
-         var perms = JSON.stringify(message.channel.permissionsFor(message.author).serialize(), null, 4);
+         var perms = JSON.stringify(message.channel.permissionsFor(message.author).serialize(), true, 4);
          var zPeRms = new Discord.RichEmbed()
          .setColor('RANDOM')
          .setTitle(':tools: Permissions')
